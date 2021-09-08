@@ -1,0 +1,196 @@
+baseURL = "https://shravanmayilan.github.io/"
+# [en, zh-cn, fr, ...] determines default content language
+defaultContentLanguage = "en"
+# language code
+languageCode = "en"
+title = "Shravan's"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "LoveIt"
+
+[params]
+  # LoveIt theme version
+  version = "0.2.X"
+  # site default theme ("light", "dark", "auto")
+  defaultTheme = "dark"
+
+[menu]
+  [[menu.main]]
+    identifier = "gallery"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Gallery"
+    url = "/wall/gallery"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+
+  # LoveIt NEW | 0.2.0 Search config
+  [params.search]
+    enable = true
+    # type of search engine ("lunr", "algolia")
+    type = "lunr"
+    # max index length of the chunked content
+    contentLength = 4000
+    # placeholder of the search bar
+    placeholder = ""
+    # LoveIt NEW | 0.2.1 max number of results length
+    maxResultLength = 10
+    # LoveIt NEW | 0.2.3 snippet length of the result
+    snippetLength = 30
+    # LoveIt NEW | 0.2.1 HTML tag name of the highlight part in results
+    highlightTag = "em"
+    # LoveIt NEW | 0.2.4 whether to use the absolute URL based on the baseURL in search index
+    absoluteURL = false
+
+  # Header config
+  [params.header]
+    # desktop header mode ("fixed", "normal", "auto")
+    desktopMode = "fixed"
+    # mobile header mode ("fixed", "normal", "auto")
+    mobileMode = "auto"
+    # LoveIt NEW | 0.2.0 Header title config
+    [params.header.title]
+      # URL of the LOGO
+      logo = ""
+      # title name
+      name = "Shravan's wall"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # LoveIt NEW | 0.2.5 whether to use typeit animation for title name
+      typeit = true
+
+# Footer config
+  [params.footer]
+    enable = true
+    # LoveIt NEW | 0.2.0 Custom content (HTML format is supported)
+    custom = ''
+    # LoveIt NEW | 0.2.0 whether to show Hugo and theme info
+    hugo = true
+    # LoveIt NEW | 0.2.0 whether to show copyright info
+    copyright = true
+    # LoveIt NEW | 0.2.0 whether to show the author
+    author = true
+    # Site creation time
+    since = 2021
+    # ICP info only in China (HTML format is supported)
+    icp = ""
+    # license info (HTML format is supported)
+    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  # Home page config
+  [params.home]
+    # LoveIt NEW | 0.2.0 amount of RSS pages
+    rss = 10
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = ""
+      # URL of avatar shown in home page
+      avatarURL = "/images/avatar.png"
+      # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
+      title = "Shravna's wall"
+      # subtitle shown in home page
+      subtitle = "This is My New Hugo Site"
+      # whether to use typeit animation for subtitle
+      typeit = false
+      # whether to show social links
+      social = true
+      # LoveIt NEW | 0.2.0 disclaimer (HTML format is supported)
+      disclaimer = ""
+    # Home page posts
+    [params.home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 6
+      # LoveIt DELETED | 0.2.0 replaced with hiddenFromHomePage in params.page
+      # default behavior when you don't set "hiddenFromHomePage" in front matter
+      defaultHiddenFromHomePage = false
+
+
+# mayilan
+# Plugins
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "plugins/reveal/reveal.css"
+  [[params.plugins.css]]
+  URL = "plugins/reveal/theme/black.css"
+  [[params.plugins.css]]
+  URL = "plugins/lightbox2/css/lightbox.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/custom/custom.css"
+
+  # [[params.plugins.css]]
+  # URL = "plugins/bootstrap/bootstrap.min.css"
+  # [[params.plugins.css]]
+  # URL = "plugins/slick/slick.css"
+  # [[params.plugins.css]]
+  # URL = "plugins/themify-icons/themify-icons.css"
+  # [[params.plugins.css]]
+  # URL = "plugins/custom/custom.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "plugins/jQuery/jquery.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/reveal/reveal.js"
+  [[params.plugins.js]]
+  URL = "plugins/lightbox2/js/lightbox.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/muuri/muuri.js"
+  [[params.plugins.js]]
+  URL = "plugins/tagcloud/tagcloud.js"
+  [[params.plugins.js]]
+  URL = "plugins/custom/custom.js"
+
+  [[params.plugins.js]]
+  # URL = "plugins/bootstrap/bootstrap.min.js"
+  # [[params.plugins.js]]
+  # URL = "plugins/slick/slick.min.js"
+  # [[params.plugins.js]]
+  # URL = "plugins/headroom/headroom.js"
+  # [[params.plugins.js]]
+  # URL = "plugins/instafeed/instafeed.min.js"
+  # [[params.plugins.js]]
+  # URL = "plugins/masonry/masonry.js"
+  # [[params.plugins.js]]
+  # URL = "plugins/reading-time/readingTime.min.js"
+  # [[params.plugins.js]]
+  # URL = "plugins/smooth-scroll/smooth-scroll.js"
+  # [[params.plugins.js]]
+  # URL = "plugins/search/fuse.min.js"
+  # [[params.plugins.js]]
+  # URL = "plugins/search/mark.js"
+  # [[params.plugins.js]]
+  # URL = "plugins/search/search.js"
+  

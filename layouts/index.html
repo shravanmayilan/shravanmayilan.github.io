@@ -1,0 +1,139 @@
+{{- define "content" -}}
+
+{{- $params := .Scratch.Get "params" -}}
+{{- $profile := .Site.Params.home.profile -}}
+{{- $posts := .Site.Params.home.posts -}}
+<div>
+  {{ $filteredPages := .Site.RegularPages }}
+  {{ $filteredPages := $filteredPages | intersect (where $filteredPages "Params.featured" "==" true) }}
+
+  <div class="swiper-container main-slider loading">
+    <div class="swiper-wrapper">
+      {{ range $filteredPages }}
+      <!--     <div> {{ .Params.image }} </div>
+    <div> {{ .Params.title }} </div>
+    <div> {{ .Params.summary }} </div> -->
+      <div class="swiper-slide">
+        <figure class="slide-bgimg" style="background-image:url( {{.Params.image }})">
+          <img src={{.Params.image }} class="entity-img" />
+        </figure>
+        <div class="content">
+          <a style="color: white;" href ={{ .Permalink }}>
+          <p class="title">{{.Params.title }}</p>
+          <span class="caption">{{.Params.summary }}</span>
+          <div style="text-align: right">
+          more...
+        </div>
+      </a> 
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
+  </div>
+  <!-- Thumbnail navigation -->
+  <div class="swiper-container nav-slider loading">
+    <div class="swiper-wrapper" role="navigation">
+      {{ range $filteredPages }}
+      <div class="swiper-slide">
+        <figure class="slide-bgimg"
+          style="background-image:url({{.Params.image }})">
+          <img src="{{.Params.image }}" class="entity-img" />
+        </figure>
+        <div class="content-small">
+          <p class="title">{{.Params.title }}</p>
+
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+
+  <!-- 
+  <div class="swiper-container main-slider loading">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <figure class="slide-bgimg"
+          style="background-image:url(/images/portraitx1024.png)">
+          <img src="/images/portraitx1024.png" class="entity-img" />
+        </figure>
+        <div class="content">
+          <p class="title">Shravan Mayilan</p>
+          <span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <figure class="slide-bgimg"
+          style="background-image:url(/images/new-symrna.jpg)">
+          <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img" />
+        </figure>
+        <div class="content">
+          <p class="title">Alexis Berry</p>
+          <span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <figure class="slide-bgimg"
+          style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s)">
+          <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img" />
+        </figure>
+        <div class="content">
+          <p class="title">Billie Pierce</p>
+          <span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+        </div>
+      </div>
+     
+    </div>
+
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
+    
+  </div>
+-->
+
+  <!-- Thumbnail navigation -->
+  <!--
+  <div class="swiper-container nav-slider loading">
+    <div class="swiper-wrapper" role="navigation">
+      <div class="swiper-slide">
+        <figure class="slide-bgimg"
+          style="background-image:url(/images/portraitx1024.png)">
+          <img src="/images/portraitx1024.png" class="entity-img" />
+        </figure>
+        <div class="content">
+          <p class="title">Shravan Mayilan</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <figure class="slide-bgimg"
+          style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg)">
+          <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img" />
+        </figure>
+        <div class="content">
+          <p class="title">Alexis Berry</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <figure class="slide-bgimg"
+          style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s)">
+          <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img" />
+        </figure>
+        <div class="content">
+          <p class="title">Billie Pierce</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+-->
+
+</div>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+<script src="plugins/custom/custom.js"></script> -->
+{{- end -}}

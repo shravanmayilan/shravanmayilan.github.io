@@ -1,0 +1,186 @@
+{{ define "content" }}
+<div class="container" style="margin-top: 50px;">
+  <div class="page">
+    <div class="container">
+    <div id="tagcloud">
+      <a href="#" rel='4'><span>C++<sup>4</sup></span></a>
+      <a href="#" rel='2'><span>Java<sup>2</sup></span></a>
+      <a href="#" rel='5'><span>Python<sup>5</sup></span></a>
+      <a href="#" rel='5'><span>javascript<sup>5</sup></span></a>
+      <a href="#" rel='4'><span>react<sup>4</sup></span></a>
+    </div>
+  </div>
+  </div>
+  <div class="grid" id="content">
+    {{ range .Params.Images }} {{ $imageContext := .}}
+
+    <div class="item paper_shadow {{delimit (split $imageContext.tags ",") " "}}" data-tags="{{ $imageContext.tags }}">
+      <a href={{ $imageContext.image | printf "/media/%s" }} data-title={{ $imageContext.caption }}
+        data-lightbox="lightbox">
+        <div class="item-content" data-date={{ $imageContext.date }}>
+          {{ with $.Site.GetPage "section" "media" }}
+          {{ with .Resources.GetMatch $imageContext.image }}
+          <span class="{{$imageContext.frame}}">
+            <img class="gallery-image" src="{{ (.Resize " 200x").Permalink }}" width={{ add (index (seq 50 | shuffle)
+              10) 150 }} />
+            <!--  use $ when accessing outer scope  -->
+          </span>
+
+          {{ end }}
+          {{ end }}
+
+        </div>
+      </a>
+    </div>
+
+    {{ end }}
+  </div>
+</div>
+
+<script>
+  var grid;
+  function filterFor(filterKey) {
+    console.log(filterKey);
+    var opts = 
+    {
+      // Default show animation
+      showDuration: 400,
+      showEasing: 'ease-in',
+
+      // Default hide animation
+      hideDuration: 400,
+      hideEasing: 'ease-out' 
+    };
+
+    opts = {};
+
+
+    if (filterKey == "all")
+    {
+      grid.filter('.muuri-item', opts);
+    }
+    else
+    {
+      // grid.filter('.muuri-item', opts);
+      //grid.filter('.' + filterKey, opts);
+      grid.filter('.' + filterKey, opts);
+
+
+    }
+
+  }
+
+  window.onload = function () {
+    //document.addEventListener("DOMContentLoaded", function(event) {
+
+      var tag_dict = {};
+
+      $( ".item" ).each(function( index ) {
+        console.log( index + ": " + $( this ).attr('data-tags') );
+        var tags = $( this ).attr('data-tags');
+        var tagsarr = tags.split(',');
+        for( var i in tagsarr)
+        {
+          var tag = tagsarr[i];
+          console.log(tag, tags);
+          if (!(tag in tag_dict))
+          {
+            tag_dict[tag] = 0;
+          }
+          tag_dict[tag] = tag_dict[tag] + 1;
+        }
+
+      });
+      $('#tagcloud').html('');
+
+      $('#tagcloud').append('<a class = "tag-a" href="#" onclick = "filterFor(\''+ 'all' + '\');" rel="' + $( ".item" ).length  + '"><span>'+ 'all' + '<sup>' + $( ".item" ).length  + '</sup></span></a>');
+
+      for (var t in tag_dict)
+      {
+        console.log(tag_dict[t], t);
+        $('#tagcloud').append('<a class = "tag-a" href="#" onclick = "filterFor(\''+ t + '\');" rel="' + tag_dict[t]  + '"><span>'+ t + '<sup>' + tag_dict[t]  + '</sup></span></a>');
+      }
+
+    $('#tagcloud a').tagcloud({
+      size: {
+        start: 16,
+        end: 30,
+        unit: "px"
+      },
+      color: {
+              start:'#01478d',
+              end:'#8d0163'
+            }
+        
+    });
+
+
+    //do work
+
+    //  $(document).ready(function() {
+    opts = {
+      // Item elements
+      items: "*",
+
+      // Default show animation
+      showDuration: 200,
+      showEasing: "ease-in",
+
+      // Default hide animation
+      hideDuration: 200,
+      hideEasing: "ease-out",
+
+      // Item's visible/hidden state styles
+      visibleStyles: {
+        opacity: "1",
+        transform: "scale(1)",
+      },
+      hiddenStyles: {
+        opacity: "0",
+        transform: "scale(0.1)",
+      },
+
+      // Layout
+      layout: {
+        fillGaps: true,
+        horizontal: false,
+        alignRight: false,
+        alignBottom: false,
+        rounding: false,
+      },
+      layoutOnResize: 500,
+      layoutOnInit: false,
+      layoutDuration: 500,
+      layoutEasing: "ease-out",
+
+      // Sorting
+      sortData: {
+        date: function (item, element) {
+          //console.log(element.children[0].children[0]);
+          return Date.parse(
+            element.children[0].children[0].getAttribute("data-date")
+          );
+        },
+      },
+
+      // Drag & Drop
+      dragEnabled: false,
+
+      // Classnames
+      containerClass: "muuri",
+      itemClass: "muuri-item",
+      itemVisibleClass: "muuri-item-shown",
+      itemHiddenClass: "muuri-item-hidden",
+      itemPositioningClass: "muuri-item-positioning",
+      itemDraggingClass: "muuri-item-dragging",
+      itemReleasingClass: "muuri-item-releasing",
+    };
+
+    grid = new Muuri(".grid", opts);
+
+    grid.sort("date", { descending: true });
+
+    grid.filter(".muuri-item", {});
+  };
+</script>
+{{ end }}
