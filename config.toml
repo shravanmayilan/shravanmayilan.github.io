@@ -3,16 +3,26 @@ baseURL = "https://sketchbook.one/"
 defaultContentLanguage = "en"
 # language code
 languageCode = "en"
-title = "Shravan's"
+title = "Shravan's sketchbook"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
+
+# Author config
+[author]
+  name = "Shravan Mayilan"
+  email = ""
+  link = ""
 
 [params]
   # LoveIt theme version
   version = "0.2.X"
   # site default theme ("light", "dark", "auto")
   defaultTheme = "dark"
+  # site description
+  description = "This is My New Hugo Site"
+  # site keywords
+  keywords = ["Theme", "Hugo"]
 
 [menu]
   [[menu.main]]
@@ -77,9 +87,9 @@ theme = "LoveIt"
     # LoveIt NEW | 0.2.0 Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = ""
+      logo = "favicon-32x32.png"
       # title name
-      name = "Shravan's wall"
+      name = "Shravan's sketchbook"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -93,7 +103,7 @@ theme = "LoveIt"
     # LoveIt NEW | 0.2.0 Custom content (HTML format is supported)
     custom = ''
     # LoveIt NEW | 0.2.0 whether to show Hugo and theme info
-    hugo = true
+    hugo = false
     # LoveIt NEW | 0.2.0 whether to show copyright info
     copyright = true
     # LoveIt NEW | 0.2.0 whether to show the author
@@ -194,3 +204,25 @@ theme = "LoveIt"
   # [[params.plugins.js]]
   # URL = "plugins/search/search.js"
   
+  #  Analytics config
+  [params.analytics]
+    enable = false
+    # Google Analytics
+    [params.analytics.google]
+      id = "G-FEWP6NS58S"
+
+  # Sitemap config
+  [sitemap]
+    changefreq = "weekly"
+    filename = "sitemap.xml"
+    priority = 0.5
+
+     #  Comment config
+    [params.page.comment]
+      enable = true
+      # Disqus comment config
+      [params.page.comment.disqus]
+        # 
+        enable = false
+        # Disqus shortname to use Disqus in posts
+        shortname = ""

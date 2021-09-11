@@ -5,7 +5,7 @@ draft: false
 featured: true
 weight: 1
 image: "/images/featured-post/portraitx1024.png"
-summary: I am an artist who loves experimenting with different mediums. 
+summary: I ❤ painting. 
 toc: false
 ---
 
