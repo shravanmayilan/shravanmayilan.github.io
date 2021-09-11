@@ -5,7 +5,7 @@ draft: false
 featured: true
 weight: 4
 image: "/images/featured-post/family.jpg"
-summary: adsd asd a sd asd asd 
+summary: Exciting news! My drawing for the Education Guide of Central Florida art contest has been selected as one of the top 10 finalists!
 ---
 
 asd as dadasd

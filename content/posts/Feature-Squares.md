@@ -5,7 +5,7 @@ draft: false
 featured: true
 weight: 5
 image: "/images/featured-post/squares.png"
-summary: adsd asd a sd asd asd 
+summary: Geometric shapes are a favorite when doodling. 
 ---
 
 asd as dadasd
