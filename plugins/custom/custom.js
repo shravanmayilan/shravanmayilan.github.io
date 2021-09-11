@@ -1,7 +1,7 @@
 // Params
 let mainSliderSelector = ".main-slider",
   navSliderSelector = ".nav-slider",
-  interleaveOffset = 0.5;
+  interleaveOffset = 1.0;
 
 // Main Slider
 let mainSliderOptions = {
@@ -10,7 +10,7 @@ let mainSliderOptions = {
   autoplay: {
     delay: 3000
   },
-  loopAdditionalSlides: 10,
+  loopAdditionalSlides: 5,
   grabCursor: true,
   watchSlidesProgress: true,
   navigation: {
@@ -67,7 +67,7 @@ let mainSlider = new Swiper(mainSliderSelector, mainSliderOptions);
 // Navigation Slider
 let navSliderOptions = {
   loop: true,
-  loopAdditionalSlides: 10,
+  loopAdditionalSlides: 5,
   speed: 1000,
   spaceBetween: 5,
   slidesPerView: 5,
@@ -89,5 +89,3 @@ let navSlider = new Swiper(navSliderSelector, navSliderOptions);
 // Matching sliders
 mainSlider.controller.control = navSlider;
 navSlider.controller.control = mainSlider;
-
-console.log("mayila!!!");
