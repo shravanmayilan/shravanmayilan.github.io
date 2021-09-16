@@ -1,14 +1,14 @@
 // Params
 let mainSliderSelector = ".main-slider",
   navSliderSelector = ".nav-slider",
-  interleaveOffset = 1.0;
+  interleaveOffset = 0.0;
 
 // Main Slider
 let mainSliderOptions = {
   loop: true,
   speed: 1000,
   autoplay: {
-    delay: 3000
+    delay: 5000
   },
   loopAdditionalSlides: 5,
   grabCursor: true,

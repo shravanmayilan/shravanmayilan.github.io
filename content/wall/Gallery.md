@@ -6,10 +6,14 @@ type: wall
 mode: one-by-one
 wall: true
 description: "photo gallery"
+aliases:
+   - /wall/gallery/
+   - /posts/feature-gallery/
+url: "/posts/feature-gallery/"
 images:
   - image: baby_fox.jpg    
     caption: baby_fox.jpg  
-    date: 1/23/2021        
+    date: 12/23/2021        
     frame: paper
     tags: pencil,animal
   - image: barn.jpg        

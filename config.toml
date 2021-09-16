@@ -8,6 +8,7 @@ title = "Shravan's sketchbook"
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
 
+
 # Author config
 [author]
   name = "Shravan Mayilan"
@@ -20,11 +21,27 @@ theme = "LoveIt"
   # site default theme ("light", "dark", "auto")
   defaultTheme = "dark"
   # site description
-  description = "This is My New Hugo Site"
+  description = "Shravan's sketchbook"
   # site keywords
   keywords = ["Theme", "Hugo"]
 
 [menu]
+  [[menu.main]]
+    identifier = "home"
+    pre = ""
+    post = ""
+    name = "Home"
+    url = "/"
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    pre = ""
+    post = ""
+    name = "About"
+    url = "/posts/feature-shravan/"
+    title = ""
+    weight = 4    
   [[menu.main]]
     identifier = "gallery"
     # you can add extra information before the name (HTML format is supported), such as icons
@@ -35,23 +52,34 @@ theme = "LoveIt"
     url = "/wall/gallery"
     # title will be shown when you hover on this menu link
     title = ""
-    weight = 1
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
     weight = 2
   [[menu.main]]
-    identifier = "categories"
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
     pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = "Categories"
-    url = "/categories/"
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
     title = ""
-    weight = 3
+    weight = 3    
+  #[[menu.main]]
+  #  identifier = "tags"
+  #  pre = ""
+  #  post = ""
+  #  name = "Tags"
+  #  url = "/tags/"
+  #  title = ""
+  #  weight = 2
+  #[[menu.main]]
+  #  identifier = "categories"
+  #  pre = ""
+  #  post = ""
+  #  name = "Categories"
+  #  url = "/categories/"
+  #  title = ""
+  #  weight = 3
 
 # Markup related configuration in Hugo
 [markup]
@@ -127,9 +155,9 @@ theme = "LoveIt"
       # URL of avatar shown in home page
       avatarURL = "/images/avatar.png"
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
-      title = "Shravna's wall"
+      title = "Shravna's sketchbook"
       # subtitle shown in home page
-      subtitle = "This is My New Hugo Site"
+      subtitle = "My online sketchbook"
       # whether to use typeit animation for subtitle
       typeit = false
       # whether to show social links

@@ -1,3 +1,5 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
 {{ define "content" }}
 <div class="container" style="margin-top: 50px;">
   <div class="page">
@@ -20,11 +22,19 @@
         <div class="item-content" data-date={{ $imageContext.date }}>
           {{ with $.Site.GetPage "section" "media" }}
           {{ with .Resources.GetMatch $imageContext.image }}
-          <span class="{{$imageContext.frame}}">
-            <img class="gallery-image" src="{{ (.Resize " 200x").Permalink }}" width={{ add (index (seq 50 | shuffle)
-              10) 150 }} />
-            <!--  use $ when accessing outer scope  -->
-          </span>
+          {{ if eq $imageContext.frame "photoframe" }}
+            <span class="{{$imageContext.frame}}">
+              <img class="gallery-image" src="{{ (.Resize " 200x").Permalink }}" width={{ add (index (seq 50 | shuffle)
+                10) 250 }} />
+              <!--  use $ when accessing outer scope  -->
+            </span>
+          {{ else }}
+            <span class="{{$imageContext.frame}}">
+              <img class="gallery-image" src="{{ (.Resize " 200x").Permalink }}" width={{ add (index (seq 50 | shuffle)
+                10) 150 }} />
+              <!--  use $ when accessing outer scope  -->
+            </span>
+          {{ end }}
 
           {{ end }}
           {{ end }}
