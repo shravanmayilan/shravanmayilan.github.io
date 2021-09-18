@@ -1,15 +1,12 @@
 {{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
 
+  
 {{ define "content" }}
 <div class="container" style="margin-top: 50px;">
   <div class="page">
     <div class="container">
     <div id="tagcloud">
-      <a href="#" rel='4'><span>C++<sup>4</sup></span></a>
-      <a href="#" rel='2'><span>Java<sup>2</sup></span></a>
-      <a href="#" rel='5'><span>Python<sup>5</sup></span></a>
-      <a href="#" rel='5'><span>javascript<sup>5</sup></span></a>
-      <a href="#" rel='4'><span>react<sup>4</sup></span></a>
+
     </div>
   </div>
   </div>
@@ -38,9 +35,10 @@
 
           {{ end }}
           {{ end }}
-
+            
         </div>
       </a>
+      <div class="gallery-title">{{$imageContext.caption}}</div>
     </div>
 
     {{ end }}

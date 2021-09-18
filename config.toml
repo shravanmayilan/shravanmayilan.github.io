@@ -90,7 +90,7 @@ theme = "LoveIt"
 
   # LoveIt NEW | 0.2.0 Search config
   [params.search]
-    enable = true
+    enable = false
     # type of search engine ("lunr", "algolia")
     type = "lunr"
     # max index length of the chunked content
@@ -109,7 +109,7 @@ theme = "LoveIt"
   # Header config
   [params.header]
     # desktop header mode ("fixed", "normal", "auto")
-    desktopMode = "fixed"
+    desktopMode = "auto"
     # mobile header mode ("fixed", "normal", "auto")
     mobileMode = "auto"
     # LoveIt NEW | 0.2.0 Header title config
