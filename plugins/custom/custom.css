@@ -128,9 +128,9 @@
 {
 
   .swiper-slide .content {
-    background-color: rgba(0, 0, 0, 0.705);
+    background-color: rgba(0, 0, 0, 0.774);
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 0;
     width: 100%;
     padding: 15px;
@@ -166,7 +166,7 @@
     font-family: 'Lora'!important;
     font-size: 2.6em;
     font-weight:normal;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .swiper-slide .content .caption {
@@ -177,6 +177,8 @@
     transform: translateX(50px);
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.7s ease;
+    margin-right: 10%;
+    font-style: italic;
   }
 
   .swiper-slide .content-small {
@@ -189,7 +191,21 @@
   }
 }
 
+.subtitle {
+  font-family: 'Pontano Sans', sans-serif!important;
+  font-size: medium  ;
+  font-weight:normal;
+  font-style: italic;
+}
 
+.gallery-title{
+  font-family: 'Pontano Sans', sans-serif!important;
+  font-size: medium  ;
+  font-weight:normal;
+  font-style: italic;
+  text-align: center;
+  color: #aaa;
+}
   
   .swiper-slide .content .caption.show {
     transform: translateX(0);
@@ -364,4 +380,31 @@
      top:-1.5vmin;
    }
  
- 
+   
+   /* Tooltip container */
+   .tooltip {
+     position: relative;
+     display: inline-block;
+     border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+   }
+   
+   /* Tooltip text */
+   .tooltip .tooltiptext {
+     visibility: hidden;
+     width: 120px;
+     background-color: black;
+     color: #fff;
+     text-align: center;
+     padding: 5px 0;
+     border-radius: 6px;
+    
+     /* Position the tooltip text - see examples below! */
+     position: absolute;
+     z-index: 1;
+   }
+   
+   /* Show the tooltip text when you mouse over the tooltip container */
+   .tooltip:hover .tooltiptext {
+     visibility: visible;
+   }
+   
