@@ -10,7 +10,7 @@ let mainSliderOptions = {
   autoplay: {
     delay: 5000
   },
-  loopAdditionalSlides: 5,
+  loopAdditionalSlides: 10,
   grabCursor: true,
   watchSlidesProgress: true,
   navigation: {
