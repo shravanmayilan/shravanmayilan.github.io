@@ -9,7 +9,7 @@ description: "photo gallery"
 aliases:
    - /wall/gallery/
    - /posts/feature-gallery/
-url: "/posts/feature-gallery/"
+url: /posts/feature-gallery/
 images:
   - image: baby_fox.jpg    
     caption: baby_fox
