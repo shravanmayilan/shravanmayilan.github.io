@@ -8,7 +8,7 @@ title = "Shravan's sketchbook"
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
 
-
+  
 # Author config
 [author]
   name = "Shravan Mayilan"
