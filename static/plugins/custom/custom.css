@@ -83,6 +83,7 @@
     overflow:auto;
   }
   .swiper-container.nav-slider {
+    display: none;
     width: 0%;
     padding-left: 5px;
   }
@@ -147,6 +148,7 @@
     overflow:auto;
   }
   .swiper-container.nav-slider {
+    display:inline;
     width: 20%;
     padding-left: 5px;
   }
