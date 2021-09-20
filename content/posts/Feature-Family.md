@@ -6,7 +6,7 @@ draft: false
 featured: true
 weight: 4
 image: "/images/featured-post/family.jpg"
-summary: Exciting news! Top 10 finalist the Education Guide of Central Florida art contest has been selected as one of the top 10 finalists!
+summary: Exciting news! Top 10 finalist in the 2021 Education Guide of Central Florida art contest.
 toc: false
 ---
 {{< figure src="/images/featured-post/shravan_family_painting.jpg" width="100%" title="" >}}

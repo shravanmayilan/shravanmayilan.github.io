@@ -12,7 +12,7 @@ aliases:
 url: /posts/feature-gallery/
 images:
   - image: baby_fox.jpg    
-    caption: baby_fox
+    caption: baby fox
     date: 12/23/2021        
     frame: paper
     tags: pencil,animal
@@ -22,7 +22,7 @@ images:
     frame: paper
     tags: wood,marker,abstract
   - image: batman01.jpg    
-    caption: batman01
+    caption: batman
     date: 1/23/2021        
     frame: paper
     tags: watercolor,superhero
@@ -66,11 +66,6 @@ images:
     date: 1/23/2021
     frame: paper
     tags: pencil
-  - image: class07.jpg
-    caption: class07
-    date: 1/23/2021
-    frame: paper
-    tags: crayon
   - image: class08.jpg
     caption: class08
     date: 1/23/2021
@@ -117,7 +112,7 @@ images:
     frame: paper
     tags: pencil
   - image: fox01.jpg
-    caption: fox01
+    caption: fox
     date: 1/23/2021
     frame: paper
     tags: pencil
@@ -126,11 +121,6 @@ images:
     date: 1/23/2021
     frame: paper
     tags: markers,greeting
-  - image: happy_holidays.jpg
-    caption: happy_holidays
-    date: 1/23/2021
-    frame: paper
-    tags: crayon
   - image: hat.jpg
     caption: hat
     date: 1/23/2021
@@ -162,7 +152,7 @@ images:
     frame: paper
     tags: watercolor
   - image: landscape01.jpg
-    caption: landscape01
+    caption: foggy day
     date: 1/23/2021
     frame: paper
     tags: watercolor,landscape
@@ -207,24 +197,19 @@ images:
     frame: paper
     tags: markers
   - image: scan0017.jpg
-    caption: scan0017
+    caption: teacher appreciation
     date: 1/23/2021
     frame: paper
     tags: watercolor,markers
-  - image: scan0026.jpg
-    caption: scan0026
-    date: 1/23/2021
-    frame: paper
-    tags: pencil,markers
   - image: spiderman01.jpg
-    caption: spiderman01
+    caption: spiderman
     date: 1/23/2021
     frame: paper
     tags: pencil,superhero
   - image: sunflower.jpg
     caption: sunflower
     date: 1/23/2021
-    frame: paper
+    frame: canvas
     tags: acrylic,still-life
   - image: sunrise.jpg
     caption: sunrise
@@ -237,7 +222,7 @@ images:
     frame: paper
     tags: watercolor,landscape
   - image: vase01.jpg
-    caption: vase01
+    caption: vase
     date: 1/23/2021
     frame: paper
     tags: crayon
@@ -246,7 +231,46 @@ images:
     date: 1/23/2021
     frame: paper
     tags: watercolor
-
+  - image: pothos.jpg
+    caption: pothos
+    date: 8/23/2021
+    frame: photoframe
+    tags: acrylic
+  - image: bananas.jpg
+    caption: bananas
+    date: 5/11/2021
+    frame: photoframe
+    tags: acrylic   
+  - image: aurora.jpg
+    caption: aurora
+    date: 5/11/2021
+    frame: canvas
+    tags: acrylic   
+  - image: apple.jpg
+    caption: apple
+    date: 7/19/2021
+    frame: canvas
+    tags: acrylic,still-life   
+  - image: squares.jpg
+    caption: squares
+    date: 7/19/2021
+    frame: canvas
+    tags: marker,abstract   
+  - image: fall_colors.jpg
+    caption: fall colors
+    date: 9/10/2021
+    frame: canvas
+    tags: marker
+  - image: dragon_eye.jpg
+    caption: dragon eye
+    date: 9/10/2021
+    frame: canvas
+    tags: oil pastels
+  - image: pineapple.jpg
+    caption: pineapple
+    date: 4/13/2021
+    frame: photoframe
+    tags: acrylic
 image: images/feature2/gallery.png
 ---
 

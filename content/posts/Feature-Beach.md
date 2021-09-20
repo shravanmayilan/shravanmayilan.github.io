@@ -7,7 +7,7 @@ featured: true
 weight: 7
 toc: false
 image: "/images/featured-post/new_smyrna.jpg"
-summary: New Smyrna beach is a favorite 
+summary: New Smyrna is my favorite beach.
 ---
 
 {{< figure src="/images/featured-post/new_smyrna.jpg" width="100%" title="" >}}
